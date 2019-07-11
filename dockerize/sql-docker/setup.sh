@@ -14,15 +14,16 @@ echo `service mysql status`
 
 echo 'Initializing Data...'
 #导入数据
-mysql < /etc/mysql/init_db.sql
-mysql < /etc/mysql/add_example_data.sql
-echo 'Done'
+mysql < /etc/mysql/initialize.sql
+# mysql < /etc/mysql/add_example_data.sql
+echo 'Done #init'
 
 sleep 1
 echo `service mysql status`
 
 mysql < /etc/mysql/privileges.sql
 
+echo 'Done #priv'
 echo `service mysql status`
 echo 'All Done'
 

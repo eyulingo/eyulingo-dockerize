@@ -15,6 +15,4 @@ cd ../
 docker push yuxiqian/eyulingo-mysql
 docker push yuxiqian/eyulingo-server
 
-docker-compose up
-
 cp ../eyulingo/src/main/properties_debug/application.properties ../eyulingo/src/main/resources/application.properties

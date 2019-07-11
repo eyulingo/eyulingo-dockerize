@@ -1,7 +1,7 @@
 version : '2.1'
 services:
   mysqldb:
-    image: yuxiqian/eyulingo-mysql:latest
+    image: yuxiqian/eyulingo-mongodb:latest
 
     environment:
       MYSQL_ROOT_PASSWORD: 
@@ -17,7 +17,7 @@ services:
       retries: 10
 
   server:
-    image: yuxiqian/eyulingo-server:latest
+    image: yuxiqian/bookie-server:latest
     ports:
       - "8080:8080"
     links:
